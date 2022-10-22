@@ -11,7 +11,7 @@
     }
   },
   "scripts": {
-    "commit-main": "git add . && git-cz \n\n\n && git push origin main",
+    "commit-main": "git add . && git-cz && git push origin main",
     "commit": "git add . && git-cz",
     "dev": "nodemon ./src/server.js",
     "init-db": "node ./src/db/init.js"

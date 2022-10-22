@@ -15,7 +15,7 @@ route.get("/create-pass", (req, res) => {
 });
 
 //Question
-route.post("/question/create", questionController.create)
+route.post("/question/create/:room", questionController.create)
 route.post("/question/:room/:question/:action", questionController.index);
 
 // Room
