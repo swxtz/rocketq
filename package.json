@@ -11,8 +11,9 @@
     }
   },
   "scripts": {
-    "commit": "git-cz",
-    "dev": "nodemon ./src/server.js"
+    "commit": "git add . && git-cz",
+    "dev": "nodemon ./src/server.js",
+    "init-db": "node ./src/db/init.js"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
@@ -30,6 +31,8 @@
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "sqlite": "^4.1.2",
+    "sqlite3": "^5.1.2"
   }
 }
