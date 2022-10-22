@@ -68,64 +68,55 @@
         <section id="questions">
           <h2 class="sr-only">Perguntas da comunidade</h2>
           <div class="questions">
-            <div class="question-wrapper">
-              <div class="question-content">
-                <div class="user">
-                  <img src="/images/Avatar.svg" alt="Avatar" />
-                </div>
-                <div class="question">
-                  <p>ADASDASDASDS</p>
-                </div>
-              </div>
-              <div class="actions">
-                <a href="#" data-id="2" class="check">
-                  <img src="/images/check 1.svg" alt="Marcar como lida" />
-                  Marcar como lida
-                </a>
-                <a href="#" data-id="2" class="delete">
-                  <img src="/images/trash 1.svg" alt="Excluir" />
-                  Excluir
-                </a>
-              </div>
-            </div>
 
-            <div class="question-wrapper">
-              <div class="question-content">
-                <div class="user">
-                  <img src="/images/Avatar.svg" alt="Avatar" />
-                </div>
-                <div class="question">
-                  <p>Oq é TypeScript</p>
-                </div>
-              </div>
-              <div class="actions">
-                <a href="#" data-id="3" class="check">
-                  <img src="/images/check 1.svg" alt="Marcar como lida" />
-                  Marcar como lida
-                </a>
-                <a href="#" data-id="3" class="delete">
-                  <img src="/images/trash 1.svg" alt="Excluir" />
-                  Excluir
-                </a>
-              </div>
-            </div>
+            <% questions.forEach(question => { %>
 
-            <div class="question-wrapper read">
-              <div class="question-content">
-                <div class="user">
-                  <img src="/images/Avatar-read.svg" alt="Avatar" />
+              <div class="question-wrapper">
+                <div class="question-content">
+                  <div class="user">
+                    <img src="/images/Avatar.svg" alt="Avatar" />
+                  </div>
+                  <div class="question">
+                    <p><%= question.title %></p>
+                  </div>
                 </div>
-                <div class="question">
-                  <p class="question">Oq é TypeScript</p>
+                <div class="actions">
+                  <a href="#" data-id="<%= question.id %>" class="check">
+                    <img src="/images/check 1.svg" alt="Marcar como lida" />
+                    Marcar como lida
+                  </a>
+                  <a href="#" data-id="<%= question.id %>" class="delete">
+                    <img src="/images/trash 1.svg" alt="Excluir" />
+                    Excluir
+                  </a>
                 </div>
               </div>
-              <div class="actions">
-                <a href="#" data-id="1" class="delete">
-                  <img src="/images/trash 1.svg" alt="Excluir" />
-                  Excluir
-                </a>
+
+            <% }); %>
+
+            <% questionsRead.forEach(questionRead => {%>
+
+              <div class="question-wrapper read">
+                <div class="question-content">
+                  <div class="user">
+                    <img src="/images/Avatar-read.svg" alt="Avatar" />
+                  </div>
+                  <div class="question">
+                    <p class="question"><%= questionRead.title %></p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <a href="#" data-id="<%= questionRead.id %>" class="delete">
+                    <img src="/images/trash 1.svg" alt="Excluir" />
+                    Excluir
+                  </a>
+                </div>
               </div>
-            </div>
+
+            <% }); %>
+
+            
+            
           </div>
         </section>
       </main>
