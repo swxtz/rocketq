@@ -11,5 +11,9 @@ module.exports = {
     action = ${action}
     password = ${password}  
     `)
+  },
+
+  create(req, res) {
+    const question = req.body.question
   }
 };
